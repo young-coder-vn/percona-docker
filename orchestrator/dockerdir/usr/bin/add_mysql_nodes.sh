@@ -28,7 +28,7 @@ am_i_leader() {
         return 1
     fi
 
-    echo '[INFO] I am a leader'
+    echo '[INFO] I am the leader'
     return 0
 }
 
@@ -61,7 +61,7 @@ main() {
 
     # Exit if not master
     while ! am_i_leader; do
-        echo '[INFO] I am not a leader. Sleeping ...'
+        echo '[INFO] I am not the leader. Sleeping ...'
 
         sleep 1
         exit 0
